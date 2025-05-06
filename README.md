@@ -4,23 +4,6 @@ This project implements and compares deep learning models for enhancing low-reso
 
 ---
 
-## 📁 Repository Structure
-
-```
-.
-├── Model Weights/          # Trained model weights
-├── Papers/                 # Research papers referenced           
-│── srcnn.py                # Python scripts for models (note: converted from ipynb, structure is mixed)
-│── dsr_cnn.py
-│── real_esrgan.ipynb
-├── Dockerfile              # Docker setup for local training
-├── README.md               
-```
-
-> ⚠️ The `.py` scripts were converted from Jupyter notebooks, so they may contain interleaved imports, definitions, and function calls.
-
----
-
 ## 🧠 Models Implemented
 
 ### 1. **SRCNN (Super-Resolution CNN)**
@@ -28,13 +11,13 @@ This project implements and compares deep learning models for enhancing low-reso
 * Based on [Dong et al., arXiv:1501.00092](https://arxiv.org/pdf/1501.00092v3)
 * Architecture: 9×9 → 5×5 → 5×5 convolutions
 * Training: 20 epochs, batch size 32, learning rate `1e-4`
-* Achieved PSNR: **31.42 dB**
+* Achieved PSNR: **`31.42 dB`**
 
 ### 2. **DSRCNN (Denoising SRCNN)**
 
 * Extension of SRCNN with added denoising functionality
 * Trained under identical settings
-* Achieved PSNR: **31.58 dB**
+* Achieved PSNR: **`31.58 dB`**
 
 ### 3. **Real-ESRGAN**
 
@@ -135,6 +118,13 @@ Minimal required packages:
 * numpy
 * matplotlib
 * Pillow
+
+You can start the training/testing using the following command:
+
+```bash
+python3 "filename.py"
+```
+Make sure the dataset has been placed in the appropriate directory(root) and appropriate changes have been made to the code. 
 
 ---
 
